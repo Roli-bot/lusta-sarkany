@@ -293,11 +293,18 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   display: block;
 }
 
+/* Landscape/action photos – keep subject slightly above centre */
 .hero-photo {
-  object-position: center 10%;
+  object-position: center 20%;
+}
+
+/* Portrait person photos – always show face, never crop head */
+.img-face-portrait {
+  object-position: center 12%;
 }
 
 .img-ph-icon {
@@ -308,16 +315,9 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   color: var(--color-text-muted);
 }
 
-@media (max-width: 600px) {
-  .img-ph.real-img img {
-    height: auto;
-    object-position: center 8%;
-  }
-}
-
-.img-ph-portrait { aspect-ratio: 3/4; }
+.img-ph-portrait  { aspect-ratio: 3/4; }
 .img-ph-landscape { aspect-ratio: 16/9; }
-.img-ph-square   { aspect-ratio: 1; }
+.img-ph-square    { aspect-ratio: 1; }
 
 /* ── NAVIGATION ─────────────────────────────────────────────── */
 .navbar {
@@ -826,6 +826,21 @@ p { color: var(--color-text-medium); line-height: 1.8; }
 
 .bio-img-wrap { position: sticky; top: 92px; }
 .bio-img-wrap .img-ph { aspect-ratio: 3/4; }
+
+/* Landing about grid — replaces inline style in index.html */
+.about-grid-landing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Landscape frame that keeps subject near top — replaces inline aspect-ratio */
+.hero-face-frame {
+  aspect-ratio: 4/3;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
 
 .bio-text h2 { margin-bottom: 1.25rem; }
 .bio-text p  { margin-bottom: 1rem; }
@@ -1379,11 +1394,35 @@ footer {
 /* ── RESPONSIVE ──────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .hero-grid      { grid-template-columns: 1fr; }
-  .hero-img-wrap  { display: none; }
   .hero-sub       { max-width: 100%; }
-  .bio-grid       { grid-template-columns: 1fr; }
-  .bio-img-wrap   { position: static; }
-  .bio-img-wrap .img-ph { aspect-ratio: 16/9; max-height: 360px; }
+
+  /* Hero image: show below text instead of hiding */
+  .hero-img-wrap  { margin-top: 2.5rem; }
+  .hero-img-wrap .img-ph {
+    aspect-ratio: 4/3;
+    max-height: 400px;
+    width: 100%;
+  }
+  .hero-img-wrap .img-ph img { object-position: center 15%; }
+
+  .bio-grid     { grid-template-columns: 1fr; }
+  .bio-img-wrap { position: static; }
+  /* Bio portrait: 4/3 keeps more face visible than 16/9 */
+  .bio-img-wrap .img-ph {
+    aspect-ratio: 4/3;
+    max-height: 400px;
+    width: 100%;
+  }
+  .bio-img-wrap .img-ph img { object-position: center 12%; }
+
+  /* About landing grid: stack on tablet */
+  .about-grid-landing {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hero-face-frame { aspect-ratio: 16/9; max-height: 360px; }
+  .hero-face-frame img { object-position: center 20%; }
+
   .why-grid       { grid-template-columns: repeat(2, 1fr); }
   .tech-grid      { grid-template-columns: repeat(2, 1fr); }
   .contact-layout { grid-template-columns: 1fr; }
@@ -1400,6 +1439,22 @@ footer {
 
   .hero { min-height: auto; padding: 3rem 0; }
   .hero-meta { flex-wrap: wrap; gap: 1rem; }
+
+  /* Hero image: shorter on mobile, face still visible */
+  .hero-img-wrap .img-ph {
+    aspect-ratio: 3/2;
+    max-height: 280px;
+  }
+  .hero-img-wrap .img-ph img { object-position: center top; }
+
+  /* Bio image: prioritise face on smaller screens */
+  .bio-img-wrap .img-ph {
+    aspect-ratio: 3/2;
+    max-height: 280px;
+  }
+  .bio-img-wrap .img-ph img { object-position: center top; }
+
+  .hero-face-frame { aspect-ratio: 16/9; max-height: 260px; }
 
   .services-grid,
   .services-full-grid { grid-template-columns: 1fr; }
@@ -1425,6 +1480,17 @@ footer {
   .cal-wrap    { padding: 1.25rem; }
   .time-grid   { grid-template-columns: repeat(2, 1fr); }
   .hero-card-float { display: none; }
+
+  /* Tightest screens: keep images meaningful but compact */
+  .hero-img-wrap .img-ph {
+    aspect-ratio: 16/9;
+    max-height: 220px;
+  }
+  .bio-img-wrap .img-ph {
+    aspect-ratio: 16/9;
+    max-height: 210px;
+  }
+  .hero-face-frame { max-height: 210px; }
 }
 
 /* ── REDUCED MOTION ───────────────────────────────────────────── */
