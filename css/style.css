@@ -308,6 +308,13 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   color: var(--color-text-muted);
 }
 
+@media (max-width: 600px) {
+  .img-ph.real-img img {
+    height: auto;
+    object-position: center 8%;
+  }
+}
+
 .img-ph-portrait { aspect-ratio: 3/4; }
 .img-ph-landscape { aspect-ratio: 16/9; }
 .img-ph-square   { aspect-ratio: 1; }

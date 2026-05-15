@@ -66,7 +66,11 @@
           <!-- Kép (sticky) -->
           <div class="bio-img-wrap">
             <div class="img-ph img-ph-portrait real-img">
-              <img src="public/kep3.jpg" alt="Jenei Zsolt portréfotó" />
+              <img src="public/kep3.jpg"
+                   srcset="public/kep3.jpg 1200w, public/kep3.jpg 800w, public/kep3.jpg 400w"
+                   sizes="(max-width:600px) 100vw, 360px"
+                   alt="Jenei Zsolt portréfotó"
+                   loading="lazy" />
             </div>
           </div>
 

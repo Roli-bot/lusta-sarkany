@@ -121,8 +121,12 @@
           <!-- Jobb: képhelytartó + lebegő kártya -->
           <div class="hero-img-wrap">
             <div class="img-ph img-ph-portrait real-img">
-              <img src="public/kep1.jpg" alt="Jenei Zsolt masszőr a kezeléshez készül" />
-            </div>
+                <img src="public/kep1.jpg"
+                     srcset="public/kep1.jpg 1200w, public/kep1.jpg 800w, public/kep1.jpg 400w"
+                     sizes="(max-width:600px) 100vw, 400px"
+                     alt="Jenei Zsolt masszőr a kezeléshez készül"
+                     loading="lazy" />
+              </div>
 
             <!-- Lebegő kártya -->
             <div class="hero-card-float" aria-hidden="true">
@@ -173,7 +177,12 @@
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;" class="about-grid-landing">
           <!-- Képhelytartó -->
           <div class="img-ph img-ph-landscape real-img hero-face-frame" style="aspect-ratio:4/3;">
-            <img src="public/kep2.png" alt="Masszázs kezelés közben, Lusta Sárkány" class="hero-photo" />
+            <img src="public/kep2.png"
+                 srcset="public/kep2.png 1200w, public/kep2.png 800w, public/kep2.png 400w"
+                 sizes="(max-width:600px) 100vw, 480px"
+                 alt="Masszázs kezelés közben, Lusta Sárkány"
+                 class="hero-photo"
+                 loading="lazy" />
           </div>
           <!-- Szöveg -->
           <div>
