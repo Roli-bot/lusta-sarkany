@@ -298,7 +298,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
 }
 
 /* Landscape/action photos – keep face near top of frame */
-.hero-photo {
+.img-ph.real-img img.hero-photo {
   object-position: center top;
 }
 
@@ -1421,7 +1421,7 @@ footer {
     gap: 2.5rem;
   }
   .hero-face-frame { aspect-ratio: 16/9; max-height: 360px; }
-  .hero-face-frame img { object-position: center top; }
+  .img-ph.real-img.hero-face-frame img { object-position: center top; }
 
   .why-grid       { grid-template-columns: repeat(2, 1fr); }
   .tech-grid      { grid-template-columns: repeat(2, 1fr); }
