@@ -1,4 +1,9 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/rolam", "destination": "/rolam.html" },
+    { "source": "/szolgaltatasok", "destination": "/szolgaltatasok.html" },
+    { "source": "/kapcsolat", "destination": "/kapcsolat.html" }
+  ]
 }
