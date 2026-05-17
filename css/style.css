@@ -1,65 +1,65 @@
 /* ================================================================
-   LUSTA SÁRKÁNY MASSZÁZS ÉS MOZGÁS
-   Jenei Zsolt – Aldea Stúdió, Budapest
-   Főstíluslap · style.css
+   LUSTA S脕RK脕NY MASSZ脕ZS 脡S MOZG脕S
+   Jenei Zsolt 鈥?Aldea St煤di贸, Budapest
+   F艖st铆luslap 路 style.css
 
-   TESTRESZABÁS:
-   ─────────────────────────────────────────────────────────────
-   • Színek:       módosítsa a --color-* változókat (lejjebb)
-   • Betűtípus:    cserélje a Google Fonts importot + --font-*
-   • Árak, szöveg: csak a HTML fájlokban szerepelnek
-   • Képek:        az .img-ph elemeket cserélje valódi <img>-re
+   TESTRESZAB脕S:
+   鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
+   鈥?Sz铆nek:       m贸dos铆tsa a --color-* v谩ltoz贸kat (lejjebb)
+   鈥?Bet疟t铆pus:    cser茅lje a Google Fonts importot + --font-*
+   鈥?脕rak, sz枚veg: csak a HTML f谩jlokban szerepelnek
+   鈥?K茅pek:        az .img-ph elemeket cser茅lje val贸di <img>-re
    ================================================================ */
 
-/* ── FONTS ──────────────────────────────────────────────────── */
+/* 鈹€鈹€ FONTS 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
 
-/* ── CUSTOM PROPERTIES ──────────────────────────────────────── */
+/* 鈹€鈹€ CUSTOM PROPERTIES 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 :root {
-  /* ─ BRAND COLORS ─ módosítsa ide a brand színeket ─ */
-  --color-primary:        #2C4A3E;   /* mély erdőzöld */
-  --color-primary-dark:   #1E3530;
-  --color-primary-light:  #EEF4F1;   /* halvány zöld tónus */
-  --color-accent:         #9B7B55;   /* meleg konyak / borostyán */
+  /* 鈹€ BRAND COLORS 鈹€ m贸dos铆tsa ide a brand sz铆neket 鈹€ */
+  --color-primary:        #003153;   /* porosz k茅k */
+  --color-primary-dark:   #002244;
+  --color-primary-light:  #E8F0F7;   /* halv谩ny k茅k t贸nus */
+  --color-accent:         #9B7B55;   /* meleg konyak / borosty谩n */
   --color-accent-dark:    #7A5F3E;
-  --color-accent-light:   #F7EFE5;   /* krémszín alap */
+  --color-accent-light:   #F7EFE5;   /* kr茅msz铆n alap */
 
-  /* ─ BACKGROUNDS ─ */
-  --color-bg:             #FAF8F5;   /* meleg törtfehér */
-  --color-bg-alt:         #F2EDE6;   /* meleg bézs */
+  /* 鈹€ BACKGROUNDS 鈹€ */
+  --color-bg:             #FAF8F5;   /* meleg t枚rtfeh茅r */
+  --color-bg-alt:         #F2EDE6;   /* meleg b茅zs */
   --color-bg-card:        #FFFFFF;
-  --color-bg-dark:        #2C4A3E;   /* sötétzöld szekciók */
+  --color-bg-dark:        #003153;   /* s枚t茅tk茅k szekci贸k */
 
-  /* ─ TEXT ─ */
+  /* 鈹€ TEXT 鈹€ */
   --color-text:           #1C1C1A;
   --color-text-medium:    #4A4A46;
   --color-text-muted:     #8A8278;
   --color-text-on-dark:   rgba(255, 255, 255, .88);
 
-  /* ─ UI ─ */
+  /* 鈹€ UI 鈹€ */
   --color-border:         #E5DDD5;
   --color-border-focus:   #9B7B55;
   --color-success:        #4A7A5F;
   --color-success-light:  #EEF6F2;
   --color-error:          #B94040;
 
-  /* ─ VASÁRNAP (Sunday) highlight ─ */
+  /* 鈹€ VAS脕RNAP (Sunday) highlight 鈹€ */
   --color-sun:            #9B7B55;
   --color-sun-bg:         #FDF5EE;
   --color-sun-border:     #DEB896;
   --color-sun-text:       #6B4F2E;
 
-  /* ─ TYPOGRAPHY ─ */
+  /* 鈹€ TYPOGRAPHY 鈹€ */
   --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-body:    'DM Sans', system-ui, -apple-system, sans-serif;
 
-  /* ─ SPACING ─ */
+  /* 鈹€ SPACING 鈹€ */
   --section-py:        7rem;
   --section-py-mobile: 4rem;
   --container-max:     1160px;
   --container-px:      1.5rem;
 
-  /* ─ RADII ─ */
+  /* 鈹€ RADII 鈹€ */
   --r-xs:   4px;
   --r-sm:   8px;
   --r-md:   14px;
@@ -67,24 +67,24 @@
   --r-xl:   28px;
   --r-full: 9999px;
 
-  /* ─ SHADOWS ─ */
-  --shadow-xs: 0 1px 3px  rgba(44, 74, 62, .06);
-  --shadow-sm: 0 2px 12px rgba(44, 74, 62, .08);
-  --shadow-md: 0 4px 28px rgba(44, 74, 62, .10);
-  --shadow-lg: 0 8px 48px rgba(44, 74, 62, .13);
+  /* 鈹€ SHADOWS 鈹€ */
+  --shadow-xs: 0 1px 3px  rgba(0, 49, 83, .06);
+  --shadow-sm: 0 2px 12px rgba(0, 49, 83, .08);
+  --shadow-md: 0 4px 28px rgba(0, 49, 83, .10);
+  --shadow-lg: 0 8px 48px rgba(0, 49, 83, .13);
   --shadow-focus: 0 0 0 3px rgba(155, 123, 85, .28);
 
-  /* ─ TRANSITIONS ─ */
+  /* 鈹€ TRANSITIONS 鈹€ */
   --t-fast: 150ms ease;
   --t-base: 240ms ease;
   --t-slow: 380ms ease;
 
-  /* ─ Z-INDEX ─ */
+  /* 鈹€ Z-INDEX 鈹€ */
   --z-nav:   100;
   --z-modal: 200;
 }
 
-/* ── RESET ──────────────────────────────────────────────────── */
+/* 鈹€鈹€ RESET 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
@@ -107,7 +107,7 @@ ul, ol         { list-style: none; }
 button         { font-family: inherit; background: none; border: none; cursor: pointer; }
 input, textarea, select { font-family: inherit; }
 
-/* ── LAYOUT ─────────────────────────────────────────────────── */
+/* 鈹€鈹€ LAYOUT 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
@@ -116,7 +116,7 @@ input, textarea, select { font-family: inherit; }
 
 section { padding: var(--section-py) 0; }
 
-/* ── TYPOGRAPHY ─────────────────────────────────────────────── */
+/* 鈹€鈹€ TYPOGRAPHY 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 h1, h2, h3, h4, h5 {
   font-family: var(--font-heading);
   color: var(--color-primary);
@@ -134,7 +134,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
 
 .lead { font-size: 1.1rem; }
 
-/* ── SECTION HEADER ─────────────────────────────────────────── */
+/* 鈹€鈹€ SECTION HEADER 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .sec-tag {
   display: inline-block;
   font-family: var(--font-body);
@@ -168,7 +168,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   border-radius: 2px;
 }
 
-/* ── BUTTONS ────────────────────────────────────────────────── */
+/* 鈹€鈹€ BUTTONS 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -193,13 +193,13 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   background: var(--color-primary);
   color: #fff;
   border-color: var(--color-primary);
-  box-shadow: 0 4px 16px rgba(44,74,62,.28);
+  box-shadow: 0 4px 16px rgba(0,49,83,.28);
 }
 .btn-primary:hover {
   background: var(--color-primary-dark);
   border-color: var(--color-primary-dark);
   transform: translateY(-1px);
-  box-shadow: 0 6px 22px rgba(44,74,62,.34);
+  box-shadow: 0 6px 22px rgba(0,49,83,.34);
 }
 
 .btn-accent {
@@ -251,8 +251,8 @@ p { color: var(--color-text-medium); line-height: 1.8; }
 .btn-sm   { padding: 9px 20px; font-size: .8rem; }
 .btn-full { width: 100%; }
 
-/* ── IMAGE PLACEHOLDERS ─────────────────────────────────────── */
-/* Cserélje le ezeket valódi <img> elemekre! */
+/* 鈹€鈹€ IMAGE PLACEHOLDERS 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
+/* Cser茅lje le ezeket val贸di <img> elemekre! */
 .img-ph {
   background: var(--color-bg-alt);
   border-radius: var(--r-lg);
@@ -297,12 +297,12 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   display: block;
 }
 
-/* Landscape/action photos – keep face near top of frame */
+/* Landscape/action photos 鈥?keep face near top of frame */
 .img-ph.real-img img.hero-photo {
   object-position: center top;
 }
 
-/* Portrait person photos – always show face, never crop head */
+/* Portrait person photos 鈥?always show face, never crop head */
 .img-face-portrait {
   object-position: center 12%;
 }
@@ -319,7 +319,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
 .img-ph-landscape { aspect-ratio: 16/9; }
 .img-ph-square    { aspect-ratio: 1; }
 
-/* ── NAVIGATION ─────────────────────────────────────────────── */
+/* 鈹€鈹€ NAVIGATION 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -342,7 +342,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   padding: 0 var(--container-px);
 }
 
-/* Logo ─────────────────────────── */
+/* Logo 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -376,7 +376,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   color: var(--color-text-muted);
 }
 
-/* Nav links ─────────────────────── */
+/* Nav links 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .nav-links {
   display: flex;
   align-items: center;
@@ -451,7 +451,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
 
 .page-top { padding-top: 72px; }
 
-/* ── HERO ────────────────────────────────────────────────────── */
+/* 鈹€鈹€ HERO 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .hero {
   min-height: calc(100svh - 72px);
   display: flex;
@@ -467,7 +467,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   inset: 0;
   background:
     radial-gradient(ellipse 70% 60% at 70% 30%, rgba(155,123,85,.06) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 80% at 5%  85%, rgba(44,74,62,.05)  0%, transparent 60%);
+    radial-gradient(ellipse 50% 80% at 5%  85%, rgba(0,49,83,.05)  0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -562,7 +562,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
 .hcf-label { font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 4px; }
 .hcf-val   { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--color-primary); }
 
-/* ── SUNDAY BAND ─────────────────────────────────────────────── */
+/* 鈹€鈹€ SUNDAY BAND 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .sunday-band {
   background: var(--color-primary);
   color: var(--color-text-on-dark);
@@ -609,7 +609,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   font-size: .95rem;
 }
 
-/* ── WHY CHOOSE US ───────────────────────────────────────────── */
+/* 鈹€鈹€ WHY CHOOSE US 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .why { background: var(--color-bg-alt); }
 
 .why-grid {
@@ -640,7 +640,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
 .why-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
 .why-card p  { font-size: .88rem; }
 
-/* ── SERVICE PREVIEW CARDS (landing) ────────────────────────── */
+/* 鈹€鈹€ SERVICE PREVIEW CARDS (landing) 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .services-preview { background: #fff; }
 
 .services-grid {
@@ -740,7 +740,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   border-top: 1px solid var(--color-border);
 }
 
-/* ── HOW IT WORKS (Steps) ───────────────────────────────────── */
+/* 鈹€鈹€ HOW IT WORKS (Steps) 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .how { background: var(--color-bg-alt); }
 
 .steps {
@@ -774,13 +774,13 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   margin: 0 auto 1.5rem;
   position: relative;
   z-index: 1;
-  box-shadow: 0 4px 14px rgba(44,74,62,.28);
+  box-shadow: 0 4px 14px rgba(0,49,83,.28);
 }
 
 .step h4 { margin-bottom: 8px; font-size: 1rem; font-family: var(--font-heading); font-size: 1.1rem; }
 .step p  { font-size: .87rem; max-width: 200px; margin: 0 auto; }
 
-/* ── CTA BAND ────────────────────────────────────────────────── */
+/* 鈹€鈹€ CTA BAND 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .cta-band {
   background: var(--color-bg-dark);
   position: relative;
@@ -801,7 +801,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
 .cta-band > .container > p { color: rgba(255,255,255,.68); max-width: 480px; margin: 0 auto 2.5rem; font-size: 1rem; }
 .cta-actions        { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
-/* ── PAGE HERO (inner pages) ─────────────────────────────────── */
+/* 鈹€鈹€ PAGE HERO (inner pages) 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .page-hero {
   padding: 4.5rem 0 3.5rem;
   background: linear-gradient(160deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
@@ -816,7 +816,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   margin: 0 auto;
 }
 
-/* ── ABOUT / RÓLAM PAGE ──────────────────────────────────────── */
+/* 鈹€鈹€ ABOUT / R脫LAM PAGE 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .bio-grid {
   display: grid;
   grid-template-columns: 380px 1fr;
@@ -827,7 +827,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
 .bio-img-wrap { position: sticky; top: 92px; }
 .bio-img-wrap .img-ph { aspect-ratio: 3/4; }
 
-/* Landing about grid — replaces inline style in index.html */
+/* Landing about grid 鈥?replaces inline style in index.html */
 .about-grid-landing {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -835,7 +835,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   align-items: center;
 }
 
-/* Landscape frame that keeps subject near top — replaces inline aspect-ratio */
+/* Landscape frame that keeps subject near top 鈥?replaces inline aspect-ratio */
 .hero-face-frame {
   aspect-ratio: 4/3;
   border-radius: var(--r-lg);
@@ -887,7 +887,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
 .tech-card h4 { font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 6px; }
 .tech-card p  { font-size: .86rem; }
 
-/* ── CONTACT / BOOKING PAGE ──────────────────────────────────── */
+/* 鈹€鈹€ CONTACT / BOOKING PAGE 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .contact-wrap { background: #fff; }
 
 .contact-layout {
@@ -942,13 +942,13 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   gap: 8px;
   text-align: center;
   padding: 12px;
-  /* TODO: Google Maps embed helye – cserélje le egy <iframe>-re:
-     <iframe src="https://maps.google.com/maps?q=Budapest+Páva+utca+27&output=embed"
+  /* TODO: Google Maps embed helye 鈥?cser茅lje le egy <iframe>-re:
+     <iframe src="https://maps.google.com/maps?q=Budapest+P谩va+utca+27&output=embed"
              width="100%" height="160" style="border:0" allowfullscreen loading="lazy"></iframe>
   */
 }
 
-/* ── FORM TABS ───────────────────────────────────────────────── */
+/* 鈹€鈹€ FORM TABS 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .form-tabs {
   display: flex;
   background: var(--color-bg);
@@ -971,16 +971,16 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   background: none;
   font-family: var(--font-body);
 }
-.tab-btn:hover:not(.active) { color: var(--color-text); background: rgba(44,74,62,.06); }
+.tab-btn:hover:not(.active) { color: var(--color-text); background: rgba(0,49,83,.06); }
 .tab-btn.active {
   background: var(--color-primary);
   color: #fff;
-  box-shadow: 0 2px 8px rgba(44,74,62,.28);
+  box-shadow: 0 2px 8px rgba(0,49,83,.28);
 }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 
-/* ── FORMS ───────────────────────────────────────────────────── */
+/* 鈹€鈹€ FORMS 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .form-wrap {
   background: var(--color-bg-card);
   border-radius: var(--r-xl);
@@ -1059,7 +1059,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   margin-top: 4px;
 }
 
-/* ── CALENDAR ────────────────────────────────────────────────── */
+/* 鈹€鈹€ CALENDAR 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .cal-wrap {
   background: var(--color-bg);
   border-radius: var(--r-lg);
@@ -1204,7 +1204,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   background: var(--color-primary) !important;
   color: #fff !important;
   font-weight: 700;
-  box-shadow: 0 2px 8px rgba(44,74,62,.32);
+  box-shadow: 0 2px 8px rgba(0,49,83,.32);
   border-color: transparent !important;
 }
 .cal-d.picked::after,
@@ -1269,7 +1269,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
   align-items: center;
   justify-content: space-between;
   background: var(--color-primary-light);
-  border: 1.5px solid rgba(44,74,62,.18);
+  border: 1.5px solid rgba(0,49,83,.18);
   border-radius: var(--r-md);
   padding: 12px 16px;
   margin-top: 1rem;
@@ -1291,7 +1291,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
 .cal-err { display: none; font-size: .78rem; color: var(--color-error); margin-top: .5rem; }
 .cal-err.show { display: block; }
 
-/* ── SUCCESS BOX ─────────────────────────────────────────────── */
+/* 鈹€鈹€ SUCCESS BOX 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .success-box {
   display: none;
   text-align: center;
@@ -1318,7 +1318,7 @@ p { color: var(--color-text-medium); line-height: 1.8; }
 }
 .success-box p { font-size: .88rem; color: var(--color-text-muted); }
 
-/* ── FOOTER ──────────────────────────────────────────────────── */
+/* 鈹€鈹€ FOOTER 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 footer {
   background: var(--color-primary);
   color: rgba(255,255,255,.72);
@@ -1380,7 +1380,7 @@ footer {
   color: rgba(255,255,255,.32);
 }
 
-/* ── UTILITIES ───────────────────────────────────────────────── */
+/* 鈹€鈹€ UTILITIES 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 .text-center { text-align: center; }
 .text-muted  { color: var(--color-text-muted); font-size: .85rem; }
 .mt-2 { margin-top: .5rem; }
@@ -1391,7 +1391,7 @@ footer {
 
 .divider { height: 1px; background: var(--color-border); margin: 2rem 0; }
 
-/* ── RESPONSIVE ──────────────────────────────────────────────── */
+/* 鈹€鈹€ RESPONSIVE 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 @media (max-width: 1024px) {
   .hero-grid      { grid-template-columns: 1fr; }
   .hero-sub       { max-width: 100%; }
@@ -1493,7 +1493,7 @@ footer {
   .hero-face-frame { max-height: 210px; }
 }
 
-/* ── REDUCED MOTION ───────────────────────────────────────────── */
+/* 鈹€鈹€ REDUCED MOTION 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     transition-duration: .01ms !important;
@@ -1501,3 +1501,4 @@ footer {
   }
   html { scroll-behavior: auto; }
 }
+
