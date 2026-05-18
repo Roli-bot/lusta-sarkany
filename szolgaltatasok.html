@@ -47,13 +47,27 @@
   </div>
 
   <main>
-    <!-- OLDAL HERO -->
-    <section class="page-hero" aria-labelledby="page-h1">
-      <div class="container">
-        <span class="sec-tag">Kezelések és árak</span>
-        <h1 id="page-h1">Szolgáltatások</h1>
-        <p>Keleti és nyugati technikák ötvözésével – minden kezelés az Ön igényeire szabva. Foglaljon időpontot bármelyik kezelésre.</p>
+    <!-- OLDAL HERO – cinematikus háttérképpel -->
+    <section class="svc-page-hero" aria-labelledby="page-h1">
+
+      <!-- Háttérkép -->
+      <div class="svc-page-hero-bg" aria-hidden="true">
+        <img src="public/kep4.JPEG"
+             alt=""
+             loading="eager"
+             fetchpriority="high" />
       </div>
+
+      <!-- Sötét átfedés -->
+      <div class="svc-page-hero-overlay" aria-hidden="true"></div>
+
+      <!-- Tartalom -->
+      <div class="container svc-page-hero-content">
+        <span class="sec-tag svc-hero-tag">Kezelések és árak</span>
+        <h1 id="page-h1">Szolgáltatások</h1>
+        <p>Keleti és nyugati technikák ötvözésével – minden kezelés az Ön igényeire szabva.</p>
+      </div>
+
     </section>
 
     <!-- ═══════════════════════════════════════════════════════

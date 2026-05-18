@@ -1894,3 +1894,67 @@ footer {
   .reveal { opacity: 1; transform: none; transition: none; }
   .lp-visual-img img { transition: none; }
 }
+
+/* Services page cinematic hero */
+.svc-page-hero {
+  position: relative;
+  height: 52vh;
+  min-height: 340px;
+  max-height: 520px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  margin-top: 72px;
+}
+.svc-page-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.svc-page-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.svc-page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(0,25,50,.82) 0%,
+    rgba(0,49,83,.45) 50%,
+    rgba(0,20,40,.25) 100%
+  );
+}
+.svc-page-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 3.5rem;
+  text-align: left;
+}
+.svc-hero-tag {
+  background: rgba(155,123,85,.22);
+  border-color: rgba(155,123,85,.4);
+  color: #F7EFE5;
+}
+.svc-page-hero-content h1 {
+  color: #fff;
+  margin-bottom: .75rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,.3);
+}
+.svc-page-hero-content p {
+  color: rgba(255,255,255,.72);
+  font-size: 1rem;
+  max-width: 480px;
+}
+
+@media (max-width: 768px) {
+  .svc-page-hero {
+    height: 44vh;
+    min-height: 280px;
+    align-items: flex-end;
+  }
+  .svc-page-hero-content { padding-bottom: 2.5rem; }
+}
