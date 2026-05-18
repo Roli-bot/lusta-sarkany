@@ -420,6 +420,41 @@ function initTabs() {
   });
 }
 
+/* ── SCROLL REVEAL ────────────────────────────────────────────── */
+function initReveal() {
+  const els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  els.forEach(el => io.observe(el));
+}
+
+/* ── HERO PARALLAX ────────────────────────────────────────────── */
+function initHeroParallax() {
+  const img = document.getElementById('hero-parallax-img');
+  if (!img) return;
+
+  /* Disable on reduced-motion or touch-only devices */
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(hover: none)').matches) return;
+
+  const onScroll = () => {
+    const scrollY = window.scrollY;
+    /* Subtle: image moves at 30% of scroll speed downward */
+    img.style.transform = `translateY(${scrollY * 0.28}px)`;
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+}
+
 /* ── INIT ─────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
@@ -427,4 +462,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initBookingForm();
   initTabs();
+  initReveal();
+  initHeroParallax();
 });
