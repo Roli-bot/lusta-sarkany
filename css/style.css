@@ -1711,11 +1711,18 @@ footer {
 }
 .lp-visual-img {
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-alt);
+  padding: 3rem 2.5rem;
 }
 .lp-visual-img img {
   width: 100%;
+  max-width: 340px;
   height: auto;
   display: block;
+  border-radius: var(--r-lg);
   transition: transform .9s ease;
 }
 .lp-visual-img:hover img { transform: scale(1.04); }
